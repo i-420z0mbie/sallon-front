@@ -1,0 +1,141 @@
+/* Overall section style */
+.appointment-section {
+    background: #eae8e3;
+    padding: 50px 20px;
+    font-family: 'Lora', serif;
+  }
+  
+  /* Container for centering and max-width */
+  .appointment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+  
+  /* Section title */
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    color: #b7883d;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* Form grid layout */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Input group for floating labels */
+  .input-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  /* Base input styling */
+  .gold-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0d2b7;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  /* Focus state */
+  .gold-input:focus {
+    border-color: #b7883d;
+    box-shadow: 0 0 5px rgba(183, 136, 61, 0.5);
+  }
+  
+  /* Floating label styles */
+  .floating-label {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    color: #999;
+  }
+  
+  /* Move the label when input is focused or has content */
+  .gold-input:focus + .floating-label,
+  .gold-input:not(:placeholder-shown) + .floating-label {
+    top: -10px;
+    left: 10px;
+    font-size: 0.85rem;
+    color: #b7883d;
+    background: #fff;
+    padding: 0 5px;
+  }
+  
+  /* Full width inputs for single column in mobile view */
+  @media screen and (max-width: 600px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #b7883d, #e0c190);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Message styling */
+  .message {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .message.success {
+    background-color: #e6f9e6;
+    color: #2d7a2d;
+  }
+  
+  .message.error {
+    background-color: #fdecea;
+    color: #d9534f;
+  }
+  
+  /* Fade in effect */
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  

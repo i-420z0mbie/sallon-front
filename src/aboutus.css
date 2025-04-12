@@ -1,0 +1,182 @@
+.aboutus-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container */
+.aboutus-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* These classes can be used if you want to use CSS triggers along with Framer Motion */
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.animate {
+    opacity: 1;
+}
+
+.fade-in-left.animate {
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+.fade-in-right.animate {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+.delay-animate {
+    animation-delay: 0.3s !important;
+}
+
+/* Gold text and gradients */
+.gold-gradient {
+    background: linear-gradient(45deg, #D4AF37, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.gold-text {
+    color: #D4AF37 !important;
+}
+
+.gold-border {
+    border: 2px solid #D4AF37 !important;
+}
+
+/* Button styles */
+.btn-outline-gold {
+    border: 2px solid #D4AF37;
+    color: #D4AF37 !important;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background: #D4AF37 !important;
+    color: #000 !important;
+}
+
+.btn-gold {
+    background: #D4AF37 !important;
+    color: #000 !important;
+    border: 2px solid #D4AF37 !important;
+    transition: all 0.3s ease;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.03);
+}
+
+/* Image frame */
+.gold-frame {
+    border: 3px solid #D4AF37 !important;
+    transition: all 0.3s ease;
+}
+
+/* Stat boxes */
+.stat-box {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 1rem;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Image wrapper with border overlay */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.photo-stack-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    z-index: 0;
+    overflow: visible;
+}
+
+.photo-card {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border: 3px solid #D4AF37;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    background-color: #fff; /* add this temporarily to see if the box is showing */
+  }
+
+/* Spread like a deck of cards */
+.photo-1 {
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transform: rotate(-5deg);
+}
+
+.photo-2 {
+    top: 20px;
+    left: 30px;
+    z-index: 3;
+    transform: rotate(-2deg);
+}
+
+.photo-3 {
+    top: 40px;
+    left: 60px;
+    z-index: 2;
+    transform: rotate(2deg);
+}
+
+.photo-4 {
+    top: 60px;
+    left: 90px;
+    z-index: 1;
+    transform: rotate(5deg);
+}
+
+.photo-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
